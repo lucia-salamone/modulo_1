@@ -1,0 +1,183 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Lucía}{Salamone}{Estudiante de Ingeniería Industrial}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{yo2.jpeg}
+\end{center}
+\bg{cvgreen}{white}{Sobre mi}\\[0.5em]
+Estudio Ingenieria Industrial en la Universidad Nacional de Cuyo. Actualmente estoy en 3er año de la carrera.
+
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Lucía Salamone
+
+Nacionalidad: Argentina 
+
+2005
+
+\bigskip
+
+\bg{cvgreen}{white}{Áreas de especialización} \\[0.5em]
+
+Programación ~•~ Gestión  Optimización ~•~ Análisis
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Intereses}\\[0.5em]
+
+Deportes ~•~ Lectura \\ 
+Aprender ~•~ Tecnología
+\bigskip
+
+
+
+\vspace{4em}
+
+\begin{flushleft}
+   \infobubble{\faInstagram}{cvgreen}{white}{luciasalamone}
+   \infobubble{\faGithub}{cvgreen}{white}{Lucia-salamone}
+\end{flushleft}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Resumen corto}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2021--2023}{Vendedora}{Ayudante}{Calzados Salamone \color{cvred}}{Trabajo de verano. Gestión de atención al cliente y manejo de caja, con responsabilidades crecientes en la organización de inventario y control de precios.}{IMG_3970} \\
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Certificados}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2022}{First Certificate}{FCE}{Cambridge \color{headerblue}}{}{cambridge.png} \\
+    \cvdegree{2023}{Nivel Secundario}{N.S.}{Colegio Maristas \color{headerblue}}{}{maristas.png} \\
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{División de tiempo}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{Dormir} &  \barrule{0.4}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{Facultad} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Para mi} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Gym} & \barrule{0.1}{0.5em}{cvpurple} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Proyectos Académicos Relevantes}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2024}{Visita a Energe}{Materia}{Introducción a la Ingeniería \color{cvred}}{Visita a la empresa Energe, especializada en la fabricación de calefones solares y el ensamblado de paneles solares, para luego realizar un informe y presentación sobre su proceso productivo, logística de distribución, alianzas estratégicas, compromiso con el triple impacto, etc.}{energe.png} \\
+    \cvevent{2024}{AutoCAD}{Materia}{Sistemas de Representación Gráfica \color{cvred}}{Desarrollé planos técnicos integrales utilizando AutoCAD, asegurando la precisión de las representaciones gráficas. Apliqué normativas técnicas vigentes para el cálculo de diámetros, pendientes y caudales, garantizando la funcionalidad y seguridad del sistema.}{autocad.png} \\
+    \cvevent{2025}{Octave}{Materia}{Métodos Numéricos y Programación \color{cvred}}{Realizar códigos que resuelvan Ecuaciones Diferenciales Ordinarias por múltiples métodos. Graficar lo desarrolado.}{octave.jpg} \\
+    \cvevent{2026}{Proyecto Integrador}{Materia}{Mecánica de los Fluidos \color{cvred}}{Proyecto llamado "Cálculo de Pérdidas de Carga y Selección de Bombas para un evaporador". Objetivo principal: Análisis hidrodinámico de un evaporador  y una caldera que se utilizan para obtener puré de tomate, donde se aplicaron los Principios de la Mecánica de Fluidos}{mecflu.jpg} \\
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+
+\section*{Idiomas}
+\begin{tabular}{l | ll}
+\textbf{Español} & C2 & {\phantom{x}\footnotesize Lengua materna} \\
+\textbf{Ingles} & B2 & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny} \\
+\textbf{Aleman} & A2 & \pictofraction{\faCircle}{cvgreen}{2}{black!30}{3}{\tiny} \\
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Habilidades}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    Técnicas & Excel, Word, OneDrive, Github, Overleaf, Octave, AutoCAD. \\
+    Personales & Capacidad de Análisis, \\
+    & Comunicación, Adaptabilidad, \\
+    & Trabajo en equipo, Puntual.
+\end{tabular}
+
+\end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Lucía Sabrina Salamone \icon{\faMapMarker}{cvgreen}{} Mendoza \icon{\faPhone}{cvgreen}{} +54 9 2612113885 \newline\icon{\faAt}{cvgreen}{} luchisalamone10@gmail.com
+}
+\end{center}
+
+
+\end{paracol}
+
+\end{document}
